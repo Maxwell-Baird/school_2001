@@ -55,7 +55,7 @@ class SchoolTest < Minitest::Test
     school1 = School.new('9:00', 7)
     school2 = School.new('9:00', 3)
 
-    assert_equal true, school1
-    assert_equal false, school2
+    assert_equal true, school1.is_school_full_time?
+    assert_equal false, school2.is_school_full_time?
   end
 end
