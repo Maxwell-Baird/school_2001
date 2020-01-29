@@ -35,4 +35,14 @@ class School
     end
     return names
   end
+
+  def end_time_to_clock_time
+    time_end_letter_holder = @start_time.delete_suffix(":00")
+    time_end = time_end_letter_holder.to_i
+    time_end = time_end + @hours_in_school_day
+    if time_end > 12
+      time_end = time_end - 12
+    end
+    time_end.to_s + ':00'
+  end
 end
